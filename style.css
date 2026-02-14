@@ -1,0 +1,152 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Full Screen Background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #66c5ea, #57337c);
+}
+
+/* Main Card */
+.container {
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    color: white;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffffff80;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background: #ffffff;
+    color: #764ba2;
+    transition: 0.3s ease;
+}
+
+/* Button Hover */
+.btn:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Total Section */
+h3 {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+/* Expense List */
+#expense-list {
+    list-style: none;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* List Item */
+#expense-list li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 0.4s ease forwards;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: crimson;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: darkred;
+    transform: scale(1.1);
+}
+
+/* Scrollbar Styling */
+#expense-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#expense-list::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
